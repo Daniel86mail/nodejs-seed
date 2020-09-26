@@ -7,7 +7,7 @@
     "bluebird": "^3.5.0",
     "dotenv-safe": "2.1.*",
     "express": "4.13.*",
-    "mongoose": "4.11.*",
+    "mongoose": "5.9.*",
     "pm2": "2.4.*",
     "request-promise": "4.2.*"
   },
