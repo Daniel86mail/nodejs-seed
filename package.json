@@ -6,7 +6,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "dotenv-safe": "2.1.*",
-    "express": "4.13.*",
+    "express": "^4.17.1",
     "mongoose": "4.11.*",
     "pm2": "2.4.*",
     "request-promise": "4.2.*"
