@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "bluebird": "^3.5.0",
+    "body-parser": "^1.19.0",
     "dotenv-safe": "2.1.*",
     "express": "^4.17.1",
     "mongoose": "4.11.*",

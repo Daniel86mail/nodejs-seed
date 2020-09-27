@@ -1,12 +1,12 @@
-const exampleController = require('../controllers/example.controller');
+const exampleController = require('../controllers/user.controller');
 const cookieMiddleware = require('../middlewares/cookie.middleware');
 
 module.exports = function (app) {
-  app.get('/route',
+  app.get('/user/:id',
     exampleController.get
   );
 
-  app.post('/route',
+  app.post('/user',
     exampleController.save
   );
 };
