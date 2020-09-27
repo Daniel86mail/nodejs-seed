@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // Load environment variables from .env file.
 require('dotenv-safe').load();
@@ -13,8 +14,9 @@ const app = express();
 console.info(`Loading node server, Environment ${app.get('env')}`);
 
 // Load routes
-require('./src/feature/routers/test.route')(app);
-require('./src/routers/example.route')(app);
+app.use(bodyParser.json());
+require('./src/routers/user.route')(app);
+require('./src/databases/mongo.db');
 
 app.listen(process.env.PORT, function (err) {
   if (err) {
