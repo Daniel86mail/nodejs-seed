@@ -9,7 +9,7 @@
     "dotenv-safe": "2.1.*",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "4.11.*",
+    "mongoose": "5.10.*",
     "pm2": "2.4.*",
     "request-promise": "4.2.*"
   },
