@@ -12,10 +12,13 @@ const environment = process.env.NODE_ENV || 'local';
 const app = express();
 
 console.info(`Loading node server, Environment ${app.get('env')}`);
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
 // Load routes
 app.use(bodyParser.json());
 require('./src/routers/user.route')(app);
+require('./src/routers/main.route')(app);
 require('./src/databases/mongo.db');
 
 app.listen(process.env.PORT, function (err) {

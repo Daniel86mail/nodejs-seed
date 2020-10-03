@@ -46,8 +46,17 @@ async function saveUser(user) {
 
 async function findUsersByName(name) {
   try {
-    const results = await UserModel.find({name: {"$regex": name, "$options": "i"}},).lean();
+    const results = await UserModel.find({name: {"$regex": name, "$options": "i"}}).lean();
     return results;
+  } catch (e) {
+    console.error(`${logPrefix}Error during find all matching (partial) name ${name}: ${e}`);
+    throw e;
+  }
+}
+
+async function getUsers() {
+  try {
+    return await UserModel.find().lean();
   } catch (e) {
     console.error(`${logPrefix}Error during find all matching (partial) name ${name}: ${e}`);
     throw e;
@@ -58,5 +67,6 @@ module.exports = {
   getUser,
   deleteUser,
   saveUser,
-  findUsersByName
+  findUsersByName,
+  getUsers
 };
