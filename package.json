@@ -40,8 +40,6 @@
     "prebuild": "npm run lint",
     "build": "./build.sh",
     "test": "mocha --require test/support/env --reporter spec test/unit/**/*.test.js",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --check-leaks test/unit/**/*.spec.js",
-    "cov-cobertura": "istanbul report cobertura",
     "coverage": "nyc --reporter=text --reporter=html node_modules/.bin/mocha -- test/unit/**/*.test.js"
   }
 }
